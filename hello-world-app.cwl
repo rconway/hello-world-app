@@ -49,4 +49,4 @@ $graph:
           glob: .
     requirements:
       DockerRequirement:
-        dockerPull: rconway/hello-world-app
+        dockerPull: rconway/hello-world-app:main
