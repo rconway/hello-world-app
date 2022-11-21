@@ -67,7 +67,7 @@ createStacCatalogRoot() {
   "stac_version": "1.0.0",
   "id": "catalog",
   "type": "Catalog",
-  "description": "Root catalog"
+  "description": "Root catalog",
   "links": [{
     "type": "application/geo+json",
     "rel": "item",
