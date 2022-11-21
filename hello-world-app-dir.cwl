@@ -3,7 +3,7 @@ $namespaces:
   s: https://schema.org/
 schemas:
   - http://schema.org/version/9.0/schemaorg-current-http.rdf
-s:softwareVersion: 0.0.1
+s:softwareVersion: 0.0.2
 
 $graph:
   # Workflow entrypoint
@@ -14,8 +14,6 @@ $graph:
     inputs:
       dir:
         type: Directory?
-      url:
-        type: string?
     outputs:
       - id: wf_outputs
         type: Directory
@@ -26,11 +24,10 @@ $graph:
         run: "#app"
         in:
           dir: dir
-          url: url
         out:
           - results
 
-  # app.sh - takes input args `--dir` and `--url`
+  # app.sh - takes input args `--dir`
   - class: CommandLineTool
     id: app
     inputs:
@@ -38,10 +35,6 @@ $graph:
         type: Directory?
         inputBinding:
           prefix: --dir
-      url:
-        type: string?
-        inputBinding:
-          prefix: --url
     outputs:
       results:
         type: Directory
