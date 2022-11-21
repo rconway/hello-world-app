@@ -118,7 +118,7 @@ createStacItem() {
   "links": [{
     "type": "application/json",
     "rel": "parent",
-    "href": "../catalog.json"
+    "href": "catalog.json"
   }, {
     "type": "application/geo+json",
     "rel": "self",
