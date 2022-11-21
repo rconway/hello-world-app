@@ -7,5 +7,3 @@ WORKDIR /app
 COPY ./app.sh /app
 
 ENV PATH="/app:${PATH}"
-
-ENTRYPOINT [ "app.sh" ]

@@ -3,13 +3,13 @@ $namespaces:
   s: https://schema.org/
 schemas:
   - http://schema.org/version/9.0/schemaorg-current-http.rdf
-s:softwareVersion: 0.0.2
+s:softwareVersion: 0.0.1
 
 $graph:
   # Workflow entrypoint
   - class: Workflow
     doc: Hello World App
-    id: hello-world
+    id: hello-world-dir
     label: hello world app
     inputs:
       dir:
@@ -30,6 +30,7 @@ $graph:
   # app.sh - takes input args `--dir`
   - class: CommandLineTool
     id: app
+    baseCommand: app.sh
     inputs:
       dir:
         type: Directory?

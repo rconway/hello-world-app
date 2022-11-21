@@ -11,7 +11,7 @@ onExit() {
 trap onExit EXIT
 
 main() {
-  cwltool --outdir out hello-world-app.cwl#hello-world --url https://eoepca.org/
+  cwltool --outdir out hello-world-app-url.cwl#hello-world-url --url https://eoepca.org/
 }
 
 main "$@"

@@ -9,7 +9,7 @@ $graph:
   # Workflow entrypoint
   - class: Workflow
     doc: Hello World App
-    id: hello-world
+    id: hello-world-url
     label: hello world app
     inputs:
       url:
@@ -30,6 +30,7 @@ $graph:
   # app.sh - takes input args `--url`
   - class: CommandLineTool
     id: app
+    baseCommand: app.sh
     inputs:
       url:
         type: string?

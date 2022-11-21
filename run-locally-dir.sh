@@ -11,7 +11,7 @@ onExit() {
 trap onExit EXIT
 
 main() {
-  cwltool --outdir out hello-world-app.cwl#hello-world --dir ./
+  cwltool --outdir out hello-world-app-dir.cwl#hello-world-dir --dir ./
 }
 
 main "$@"
